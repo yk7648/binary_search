@@ -7,9 +7,9 @@ int A[100000];
 int p(int x){
 	int i;
 	int y = k;
-		for(i = 1; i < n + 1; i++){
+		for(i = 0; i < n ; i++){
 	    if (A[i] % x > 0) y = y - A[i] / x - 1;
-	    y = y - A[i] / x;
+	    else y = y - A[i] / x;
 		 }
 	return y >= 0;
 }
@@ -17,7 +17,7 @@ int p(int x){
 int main(){
 	int i, j, lb, ub;
     scanf("%d%d", &n, &k);
-    for(i = 1; i < n + 1 ; i++){
+    for(i = 0; i < n ; i++){
 	scanf("%d", &A[i]);
     }
 	lb = 0;

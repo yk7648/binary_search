@@ -5,15 +5,12 @@ int n, k;
 int A[100000];
 
 int q(int x){
-	int i, y, z;
+	int i, y;
 	y = 0;
-	z = 0;
 	for(i = 1; i < n + 1; i++){
-	if(z < A[i]){
 	if(y < A[i]) y = A[i];
-	else z = A[i];
-    }}
-    return x >= y + z;
+	}
+    return x >= y;
 }
 
 int p(int x){
@@ -21,7 +18,7 @@ int p(int x){
 	int y = 0;
 	int z = k;
 		for(i = 1; i < n + 1; i++){
-	    if (x >  y + A[i]) {
+	    if (x >=  y + A[i]) {
 	    y = y + A[i];
 	    }
 	    else{
