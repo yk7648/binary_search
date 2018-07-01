@@ -33,8 +33,7 @@ int main(){
 			lb = m;
 		}
 	}
-	ub = ub - 1;
-	printf("%d\n", ub);
+	printf("%d\n", lb);
 	return 0;
 }
 

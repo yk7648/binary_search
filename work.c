@@ -4,20 +4,13 @@ int n, k;
 
 int A[100000];
 
-int q(int x){
-	int i, y;
-	y = 0;
-	for(i = 1; i < n + 1; i++){
-	if(y < A[i]) y = A[i];
-	}
-    return x >= y;
-}
-
 int p(int x){
 	int i;
 	int y = 0;
 	int z = k;
+	int w = 0;
 		for(i = 1; i < n + 1; i++){
+		if (w < A[i]) w = A[i];
 	    if (x >=  y + A[i]) {
 	    y = y + A[i];
 	    }
@@ -25,7 +18,7 @@ int p(int x){
 	    y = A[i];
 	    z = z - 1;
 		}}
-	return q(x) && z >=1;
+	return x >= w && z >=1;
 }
 
 int main(){
@@ -35,10 +28,11 @@ int main(){
 	scanf("%d", &A[i]);
     }
 	lb = 0;
-	ub = 1;
+	ub = 0;
 	for(j = 1; j < n + 1; j++){
     ub = ub + A[j];
     }
+    ub = ub * n;
     while(ub - lb > 1){
 		int m = (lb + ub) / 2;
 		if(p(m)){
