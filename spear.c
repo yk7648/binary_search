@@ -20,10 +20,11 @@ int main(){
 	scanf("%d", &A[i]);
     }
 	lb = 0;
-	ub = n +1;
+	ub = 0;
 	for(j = 0; j < n ; j++){
-    if(ub <= A[j]) ub = A[j] + 1;
+    ub = ub +A[j] ;
     }
+    ub = ub * n + 1;
     while(ub - lb > 1){
 		int m = (lb + ub) / 2;
 		if(p(m)){
@@ -36,4 +37,3 @@ int main(){
 	printf("%d\n", lb);
 	return 0;
 }
-
