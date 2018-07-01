@@ -7,7 +7,7 @@ int A[100000];
 int p(int x){
 	int i;
 	int y = 0;
-	    for(i = 1; i < n +1; i++){
+	    for(i = 0; i < n ; i++){
 	    	y = y + A[i] / x;
 	    	}
     return k > y;
@@ -16,12 +16,12 @@ int p(int x){
 int main(){
 	int i, j, lb, ub;
     scanf("%d%d", &n, &k);
-    for(i = 1; i < n + 1 ; i++){
+    for(i = 0; i < n  ; i++){
 	scanf("%d", &A[i]);
     }
 	lb = 0;
 	ub = n +1;
-	for(j = 1; j < n + 1; j++){
+	for(j = 0; j < n ; j++){
     if(ub <= A[j]) ub = A[j] + 1;
     }
     while(ub - lb > 1){

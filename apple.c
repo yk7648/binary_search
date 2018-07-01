@@ -21,9 +21,9 @@ int main(){
 	scanf("%d", &A[i]);
     }
 	lb = 0;
-	ub = 1;
+	ub = 0;
 	for(j = 0; j < n ; j++){
-    if(ub <= A[j]) ub = A[j] + 1;
+    if(ub <= A[j]) ub = A[j] ;
 	}
 	while(ub - lb > 1){
 		int m = (lb + ub) / 2;
