@@ -28,11 +28,7 @@ int main(){
 	scanf("%d", &A[i]);
     }
 	lb = 0;
-	ub = 0;
-	for(j = 1; j < n + 1; j++){
-    ub = ub + A[j];
-    }
-    ub = ub * n;
+	ub = 1000000000;
     while(ub - lb > 1){
 		int m = (lb + ub) / 2;
 		if(p(m)){
