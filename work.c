@@ -9,7 +9,7 @@ int p(int x){
 	int y = 0;
 	int z = k;
 	int w = 0;
-		for(i = 1; i < n + 1; i++){
+		for(i = 0; i < n ; i++){
 		if (w < A[i]) w = A[i];
 	    if (x >=  y + A[i]) {
 	    y = y + A[i];
@@ -24,7 +24,7 @@ int p(int x){
 int main(){
 	int i, j, lb, ub;
     scanf("%d%d", &n, &k);
-    for(i = 1; i < n + 1 ; i++){
+    for(i = 0; i < n  ; i++){
 	scanf("%d", &A[i]);
     }
 	lb = 0;
